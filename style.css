@@ -1,0 +1,199 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+/* ICONE DE MENU BURGER CACHE EN MODE DESKTOP */
+.fa-bars{
+    color:white;
+    display:none;
+}
+ul{
+    list-style: none;
+}
+h2{
+    margin-bottom: 1rem;
+}
+
+/* NAVBAR */
+header{   
+    background-color: #90886d;
+    height: 5rem; 
+}
+nav{
+    height: 100%;
+}
+ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+li{
+    margin-right: 2rem;
+}
+nav a {
+    transition: all 0.3s ease-in-out;
+}
+nav a:hover{
+    color: black;
+}
+nav div{
+    height: 100%;
+}
+/* --------------MAIN PART------------  */
+
+main {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    padding: 2rem ;
+}
+article{
+    /* width: 25vh; */
+    width: 400px;
+    border:1px solid black;
+    box-shadow: 3px 3px 7px black;
+    position: relative;
+    padding-bottom: 4rem;
+
+}
+
+.img-container {
+    background-color: black;
+    width: 100%;
+    height: 200px;   
+}
+img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-container{
+    padding: 1rem;
+}
+/* ------------BUTTON STYLE PART----------- */
+.btn{
+    padding: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: white;
+}
+.btn-chasseur{
+    background-color: darkolivegreen;
+    border: 1px solid darkolivegreen;
+}
+.btn-chasseur:hover{
+    color: darkolivegreen;
+}
+.btn-moine{
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+}
+.btn-moine:hover{
+    color: lightgreen;
+}
+.btn-paladin{
+    background-color: pink;
+    border: 1px solid pink;
+}
+.btn-paladin:hover{
+    color: pink;
+}
+/* ICONS */
+i{
+    font-size: 25px;
+}
+.fa-hippo{
+    color: green;
+}
+.fa-wand-magic-sparkles{ 
+    color: lightgreen;
+} 
+.fa-gavel{
+    color: pink;
+}
+/* ------------RESPONSIVE PART--------- */
+
+/* ------------DESKTOP SCREEN-------- */
+@media screen and (max-width:1280px) {
+    main{
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+    }  
+
+    article{
+        margin: 2rem;
+        height: 80vh;
+    }
+}
+/* -------------TABLET SCREEN---------- */
+
+@media screen and (max-width:550px) {
+
+    header{
+        height: auto;
+        padding: 1rem;
+    }
+    ul{
+        flex-direction: column;
+    }
+    li{
+        margin: 5px;
+    }
+}
+
+/*------- MOBILE SCREEN ------*/
+@media screen and (max-width: 440px) {
+    /* ----POSITIONNEMENT DU MENU BURGER EN FIN DE NAV--- */
+    nav{
+        display: flex;
+        justify-content: end;
+    }
+    /*----- AFFICHAGE DU MENU BURGER EN RESPONSIVE----- */
+    .fa-bars{
+        display:block;
+
+    }
+
+    /* NOUVELLE DEFINITION DES PROPRIETE DE LA LISTE */
+    nav ul {
+        display: none;
+        position: absolute;
+        z-index: 50;
+        height: auto;
+        top: 40px;
+        right: 0px;
+    }
+
+    /* NOUVELLE DEFINITION DU STYLE DES ELEMENTS DE LA LISTE */
+    nav li{
+        padding: 10px 0;
+        width: 80px;
+        background-color: #90886d;
+        border: 1px solid black;
+        margin: 0;
+        text-align: center;
+    }
+/* REAFFICHAGE DU MENU VIA LE HOVER DU PARENT */
+    nav>div:hover ul {
+        display: block;
+    }
+    article{
+        width: 90vw;
+        height: auto;
+    }
+    a{
+        width: 70%;
+        text-align: center;
+    }
+}
